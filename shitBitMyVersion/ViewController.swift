@@ -13,6 +13,10 @@ import CoreBluetooth
 let hrService = CBUUID(string: "0x180D");
 let hrmCharCBUUID = CBUUID(string: "2A37");
 var maxHeartRate : Int?;
+//Changed: Added Text for the motivational message
+let messages = ["Start Workout When Ready", "Heart Rate is too low", "Good Job! Keep it Up!"];
+let partialMaxHeartRate = 140;
+
 
 class ViewController: UIViewController {
     var cbCentralManager : CBCentralManager!;
@@ -20,9 +24,19 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var heartRateText: UILabel!
     
+    //Changed: Added maxHeartRateText and motivation message
+    @IBOutlet weak var maxHeartRateText: UILabel!
+    @IBOutlet weak var motiviationMessage: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad();
-        maxHeartRate = -1;
+        maxHeartRate = 0;
+        //Changed: Initializing the labels to zeros
+        maxHeartRateText.text = String(0);
+        heartRateText.text = String(0);
+        motiviationMessage.text = messages[0];
+        motiviationMessage.backgroundColor = UIColor.white;
+        
         cbCentralManager = CBCentralManager(delegate: self, queue: nil);
         
         // Do any additional setup after loading the view.
@@ -137,14 +151,31 @@ extension ViewController : CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if characteristic.uuid == CBUUID(string: "2A37") {
             //update heart rate
-            print("Characteristic heartrate \(characteristic.uuid)");
+            //print("Characteristic heartrate \(characteristic.uuid)");
             let hr = heartRate(from: characteristic);
-            
+            print("Current Heart Rate: ", hr);
+                        
             if hr > maxHeartRate! {
                 maxHeartRate = hr;
+                print("Changed Max to ", hr);
+                //Changed: Updates the max heart to new value
+                maxHeartRateText.text = String(hr);
             }
             
-            heartRateText.text = String(hr) + "1";
+            
+            //Changed: Added motivational stuff
+            if hr >= (partialMaxHeartRate) {
+                motiviationMessage.text = messages[2];
+                motiviationMessage.backgroundColor = UIColor.green;
+                motiviationMessage.textColor = UIColor.white;
+            }
+            else{
+                motiviationMessage.text = messages[1];
+                motiviationMessage.backgroundColor = UIColor.red;
+                motiviationMessage.textColor = UIColor.white;
+            }
+            
+            heartRateText.text = String(hr);
         }
         else {
             print("Characteristic unconcerned about: ")
@@ -157,19 +188,8 @@ extension ViewController : CBPeripheralDelegate {
     private func heartRate(from characteristic: CBCharacteristic) -> Int {
         guard let characteristicData = characteristic.value else { return -1 }
         let byteArray = [UInt8](characteristicData)
-        /*
-        // See: https://www.bluetooth.com/specifications/gatt/viewer?attributeXmlFile=org.bluetooth.characteristic.heart_rate_measurement.xml
-        // The heart rate mesurement is in the 2nd, or in the 2nd and 3rd bytes, i.e. one one or in two bytes
-        // The first byte of the first bit specifies the length of the heart rate data, 0 == 1 byte, 1 == 2 bytes
-        let firstBitValue = byteArray[0] & 0x01
-        if firstBitValue == 0 {
-            // Heart Rate Value Format is in the 2nd byte
-            return Int(byteArray[1])
-        } else {
-            // Heart Rate Value Format is in the 2nd and 3rd bytes
-            return (Int(byteArray[1]) << 8) + Int(byteArray[2])
-        }
-    */
+       
+        //Got rid of all the unecessary code
         return Int(byteArray[1]);
     }
 }

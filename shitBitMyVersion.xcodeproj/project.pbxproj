@@ -283,9 +283,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R28HEW58KA;
+				DEVELOPMENT_TEAM = BLQ7MXSW4T;
 				INFOPLIST_FILE = shitBitMyVersion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shitBitMyVersion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,9 +299,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = R28HEW58KA;
+				DEVELOPMENT_TEAM = BLQ7MXSW4T;
 				INFOPLIST_FILE = shitBitMyVersion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shitBitMyVersion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
