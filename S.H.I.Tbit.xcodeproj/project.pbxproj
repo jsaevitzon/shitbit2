@@ -13,10 +13,13 @@
 		A0AB69CA20942B3400655D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A0AB69C920942B3400655D8B /* Assets.xcassets */; };
 		A0AB69CD20942B3400655D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0AB69CB20942B3400655D8B /* LaunchScreen.storyboard */; };
 		A0AB69DA20942CBC00655D8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0AB69D920942CBC00655D8B /* ViewController.swift */; };
+		FFE9717A20B3C0F20047ADA5 /* Soft Marshmallow.otf in Resources */ = {isa = PBXBuildFile; fileRef = FFE9717920B3C0F10047ADA5 /* Soft Marshmallow.otf */; };
+		FFE9717D20B3C2180047ADA5 /* Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE9717B20B3C2180047ADA5 /* Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png */; };
+		FFE9717E20B3C2180047ADA5 /* 33037614_1507804879331640_8462329687706697728_n.png in Resources */ = {isa = PBXBuildFile; fileRef = FFE9717C20B3C2180047ADA5 /* 33037614_1507804879331640_8462329687706697728_n.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A0AB69BC20942B3400655D8B /* shitBitMyVersion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = shitBitMyVersion.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A0AB69BC20942B3400655D8B /* S.H.I.Tbit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = S.H.I.Tbit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0AB69BF20942B3400655D8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A0AB69C420942B3400655D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A0AB69C720942B3400655D8B /* shitBitMyVersion.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = shitBitMyVersion.xcdatamodel; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		A0AB69CC20942B3400655D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0AB69CE20942B3400655D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0AB69D920942CBC00655D8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FFE9717920B3C0F10047ADA5 /* Soft Marshmallow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Soft Marshmallow.otf"; path = "../../../Downloads/soft_marshmallow/Soft Marshmallow.otf"; sourceTree = "<group>"; };
+		FFE9717B20B3C2180047ADA5 /* Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png"; path = "../../../Downloads/Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png"; sourceTree = "<group>"; };
+		FFE9717C20B3C2180047ADA5 /* 33037614_1507804879331640_8462329687706697728_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 33037614_1507804879331640_8462329687706697728_n.png; path = ../../../Downloads/33037614_1507804879331640_8462329687706697728_n.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +54,7 @@
 		A0AB69BD20942B3400655D8B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A0AB69BC20942B3400655D8B /* shitBitMyVersion.app */,
+				A0AB69BC20942B3400655D8B /* S.H.I.Tbit.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -58,6 +64,9 @@
 			children = (
 				A0AB69BF20942B3400655D8B /* AppDelegate.swift */,
 				A0AB69C320942B3400655D8B /* Main.storyboard */,
+				FFE9717C20B3C2180047ADA5 /* 33037614_1507804879331640_8462329687706697728_n.png */,
+				FFE9717B20B3C2180047ADA5 /* Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png */,
+				FFE9717920B3C0F10047ADA5 /* Soft Marshmallow.otf */,
 				A0AB69D920942CBC00655D8B /* ViewController.swift */,
 				A0AB69C920942B3400655D8B /* Assets.xcassets */,
 				A0AB69CB20942B3400655D8B /* LaunchScreen.storyboard */,
@@ -70,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A0AB69BB20942B3400655D8B /* shitBitMyVersion */ = {
+		A0AB69BB20942B3400655D8B /* S.H.I.Tbit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A0AB69D120942B3400655D8B /* Build configuration list for PBXNativeTarget "shitBitMyVersion" */;
+			buildConfigurationList = A0AB69D120942B3400655D8B /* Build configuration list for PBXNativeTarget "S.H.I.Tbit" */;
 			buildPhases = (
 				A0AB69B820942B3400655D8B /* Sources */,
 				A0AB69B920942B3400655D8B /* Frameworks */,
@@ -82,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = shitBitMyVersion;
+			name = S.H.I.Tbit;
 			productName = shitBitMyVersion;
-			productReference = A0AB69BC20942B3400655D8B /* shitBitMyVersion.app */;
+			productReference = A0AB69BC20942B3400655D8B /* S.H.I.Tbit.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -103,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A0AB69B720942B3400655D8B /* Build configuration list for PBXProject "shitBitMyVersion" */;
+			buildConfigurationList = A0AB69B720942B3400655D8B /* Build configuration list for PBXProject "S.H.I.Tbit" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -116,7 +125,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A0AB69BB20942B3400655D8B /* shitBitMyVersion */,
+				A0AB69BB20942B3400655D8B /* S.H.I.Tbit */,
 			);
 		};
 /* End PBXProject section */
@@ -128,6 +137,9 @@
 			files = (
 				A0AB69CD20942B3400655D8B /* LaunchScreen.storyboard in Resources */,
 				A0AB69CA20942B3400655D8B /* Assets.xcassets in Resources */,
+				FFE9717D20B3C2180047ADA5 /* Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png in Resources */,
+				FFE9717E20B3C2180047ADA5 /* 33037614_1507804879331640_8462329687706697728_n.png in Resources */,
+				FFE9717A20B3C0F20047ADA5 /* Soft Marshmallow.otf in Resources */,
 				A0AB69C520942B3400655D8B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -283,9 +295,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BLQ7MXSW4T;
+				DEVELOPMENT_TEAM = JH4BA2VBX8;
 				INFOPLIST_FILE = shitBitMyVersion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shitBitMyVersion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -299,9 +311,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = BLQ7MXSW4T;
+				DEVELOPMENT_TEAM = JH4BA2VBX8;
 				INFOPLIST_FILE = shitBitMyVersion/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.shitBitMyVersion;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,7 +325,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A0AB69B720942B3400655D8B /* Build configuration list for PBXProject "shitBitMyVersion" */ = {
+		A0AB69B720942B3400655D8B /* Build configuration list for PBXProject "S.H.I.Tbit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0AB69CF20942B3400655D8B /* Debug */,
@@ -322,7 +334,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A0AB69D120942B3400655D8B /* Build configuration list for PBXNativeTarget "shitBitMyVersion" */ = {
+		A0AB69D120942B3400655D8B /* Build configuration list for PBXNativeTarget "S.H.I.Tbit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A0AB69D220942B3400655D8B /* Debug */,
