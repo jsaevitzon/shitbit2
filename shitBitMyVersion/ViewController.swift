@@ -12,7 +12,7 @@ import CoreBluetooth
 
 let hrService = CBUUID(string: "0x180D");
 let hrmCharCBUUID = CBUUID(string: "2A37");
-var maxHeartRate : Int?;
+var maxHeartRate = 0;
 //Changed: Added Text for the motivational message
 let messages = ["Start Workout When Ready", "Heart Rate is too low", "Good Job! Keep it Up!"];
 let partialMaxHeartRate = 140;
@@ -30,7 +30,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad();
-        maxHeartRate = 0;
         //Changed: Initializing the labels to zeros
         maxHeartRateText.text = String(0);
         heartRateText.text = String(0);
@@ -39,7 +38,7 @@ class ViewController: UIViewController {
         
         cbCentralManager = CBCentralManager(delegate: self, queue: nil);
         
-        // Do any additional setup after loading the view.
+    
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,15 +46,6 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -64,20 +54,20 @@ extension ViewController: CBCentralManagerDelegate {
         let state = central.state;
         
         if state == .unknown {
-            
+            print("State unknown");
         }
         else if state == .resetting {
-            
+            print("State resetting");
         }
         else if state == .unsupported {
-            
+            print("State unsupported");
         }
         else if state == .poweredOn {
-            //TODO: Make this so it only looks for heart rate monitors
+            print("Device powered on");
             cbCentralManager.scanForPeripherals(withServices: [hrService]);
         }
         else if state == .poweredOff {
-            
+            print("Device powered off");
         }
     }
     
@@ -140,7 +130,6 @@ extension ViewController : CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         if let characteristics = service.characteristics {
             for char in characteristics {
-                //allow hrm to notify phone of incoming data
                 if char.properties.contains(.notify) {
                     peripheral.setNotifyValue(true, for: char);
                 }
@@ -150,31 +139,34 @@ extension ViewController : CBPeripheralDelegate {
     
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if characteristic.uuid == CBUUID(string: "2A37") {
+            
             //update heart rate
-            //print("Characteristic heartrate \(characteristic.uuid)");
             let hr = heartRate(from: characteristic);
-            print("Current Heart Rate: ", hr);
-                        
-            if hr > maxHeartRate! {
+            
+            //for debugging
+            print("Characteristic heartrate \(characteristic.uuid)");
+            print("\(hr)");
+            
+            
+            //motivational messages
+            //if hr > maxHeartRate! could crash. Changing it...
+            if  hr > maxHeartRate {
                 maxHeartRate = hr;
-                print("Changed Max to ", hr);
-                //Changed: Updates the max heart to new value
                 maxHeartRateText.text = String(hr);
             }
-            
             
             //Changed: Added motivational stuff
             if hr >= (partialMaxHeartRate) {
                 motiviationMessage.text = messages[2];
                 motiviationMessage.backgroundColor = UIColor.green;
-                motiviationMessage.textColor = UIColor.white;
             }
             else{
                 motiviationMessage.text = messages[1];
                 motiviationMessage.backgroundColor = UIColor.red;
-                motiviationMessage.textColor = UIColor.white;
             }
             
+            //moved this outside of blocks.
+            motiviationMessage.textColor = UIColor.white;
             heartRateText.text = String(hr);
         }
         else {
@@ -183,13 +175,9 @@ extension ViewController : CBPeripheralDelegate {
         }
     }
     
-    
-    //TODO: GONNNA HAVE TO REVAMP THIS CODE... WAY TOO COPPIED
     private func heartRate(from characteristic: CBCharacteristic) -> Int {
         guard let characteristicData = characteristic.value else { return -1 }
-        let byteArray = [UInt8](characteristicData)
-       
-        //Got rid of all the unecessary code
+        let byteArray = [UInt8](characteristicData);
         return Int(byteArray[1]);
     }
 }
