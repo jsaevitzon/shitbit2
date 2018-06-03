@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Yd-vh-UCS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Yd-vh-UCS">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -35,7 +35,7 @@
         <!--View Controller-->
         <scene sceneID="IqE-xg-sii">
             <objects>
-                <viewController storyboardIdentifier="initialVC" id="pDm-cf-oe5" customClass="ViewController" customModule="shitBitMyVersion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="initialVC" id="pDm-cf-oe5" customClass="ViewController" customModule="S_H_I_Tbit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t0d-XE-SzK">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -112,6 +112,6 @@
     </scenes>
     <resources>
         <image name="33037614_1507804879331640_8462329687706697728_n.png" width="400" height="200"/>
-        <image name="Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png" width="480" height="480"/>
+        <image name="Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png" width="640" height="640"/>
     </resources>
 </document>

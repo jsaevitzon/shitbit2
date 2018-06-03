@@ -15,7 +15,7 @@ let hrmCharCBUUID = CBUUID(string: "2A37");
 var maxHeartRate = 0;
 //Changed: Added Text for the motivational message
 let messages = ["Start Workout When Ready", "Heart Rate is too low", "Good Job! Keep it Up!"];
-let partialMaxHeartRate = 140;
+let partialMaxHeartRate = 130;
 
 
 class ViewController: UIViewController {

@@ -27,9 +27,9 @@
 		A0AB69CC20942B3400655D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A0AB69CE20942B3400655D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0AB69D920942CBC00655D8B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		FFE9717920B3C0F10047ADA5 /* Soft Marshmallow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Soft Marshmallow.otf"; path = "../../../Downloads/soft_marshmallow/Soft Marshmallow.otf"; sourceTree = "<group>"; };
-		FFE9717B20B3C2180047ADA5 /* Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png"; path = "../../../Downloads/Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png"; sourceTree = "<group>"; };
-		FFE9717C20B3C2180047ADA5 /* 33037614_1507804879331640_8462329687706697728_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 33037614_1507804879331640_8462329687706697728_n.png; path = ../../../Downloads/33037614_1507804879331640_8462329687706697728_n.png; sourceTree = "<group>"; };
+		FFE9717920B3C0F10047ADA5 /* Soft Marshmallow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Soft Marshmallow.otf"; path = "/Users/JustinLoo/Documents/UCLA/CS M117/Project/gsbit/shitbit2/Soft Marshmallow.otf"; sourceTree = "<absolute>"; };
+		FFE9717B20B3C2180047ADA5 /* Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png"; path = "../Poop_Emoji_7b204f05-eec6-4496-91b1-351acc03d2c7_large.png"; sourceTree = "<group>"; };
+		FFE9717C20B3C2180047ADA5 /* 33037614_1507804879331640_8462329687706697728_n.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = 33037614_1507804879331640_8462329687706697728_n.png; path = ../33037614_1507804879331640_8462329687706697728_n.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -295,7 +295,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JH4BA2VBX8;
+				DEVELOPMENT_TEAM = BLQ7MXSW4T;
 				INFOPLIST_FILE = shitBitMyVersion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -311,7 +311,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JH4BA2VBX8;
+				DEVELOPMENT_TEAM = BLQ7MXSW4T;
 				INFOPLIST_FILE = shitBitMyVersion/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
